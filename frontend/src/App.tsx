@@ -20,10 +20,11 @@ export default function App() {
 
     setLoading(true);
     try {
-      const userRes = await axios.post("http://localhost:4000/api/user/", { username });
+      //http://localhost:4000orhttps://dreamai-backend-j3n6.onrender.com
+      const userRes = await axios.post("https://dreamai-backend-j3n6.onrender.com/api/user/", { username });
       const userId = userRes.data.userId;
 
-      const dreamRes = await axios.post("http://localhost:4000/api/dream", {
+      const dreamRes = await axios.post("https://dreamai-backend-j3n6.onrender.com/api/dream", {
         userId,
         userMessage: dream,
       });
